@@ -519,7 +519,7 @@ paths:
         - quantum_code
       summary: Get the circuit implementation of circuit with parameters
       description: ''
-      operationId: CircuitIBMqiskitParameterized
+      operationId: CircuitRandomNumberGenerator
       requestBody:
         description: algorithm parameters
         content:

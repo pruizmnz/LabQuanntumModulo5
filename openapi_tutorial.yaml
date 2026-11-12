@@ -512,6 +512,47 @@ paths:
           description: Invalid execution
       x-quantumCode: 'https://bitbucket.org/spilab/quantum-circuits-code/raw/1ba980ee63c38fd77ec670412c4aab5215e78a8f/Popular/Simon_algorithm.py'
       x-quantumProvider: 'ibm'
+
+  /circuit/RandomNumberGenerator:
+    post:
+      tags:
+        - quantum_code
+      summary: Get the circuit implementation of circuit with parameters
+      description: ''
+      operationId: CircuitIBMqiskitParameterized
+      requestBody:
+        description: algorithm parameters
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Parameters'
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://bitbucket.org/pruizmnz/quantumcircuits/raw/5072f406044704b3f8ae315b8eb76f5dcd15cbe6/QuantumRandomGenerator.py'
+      x-quantumProvider: 'ibm'
       
   /findByCategory:
     get:

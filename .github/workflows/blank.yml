@@ -56,7 +56,7 @@ jobs:
          python -m compileall .
          #python -m openapi_server          
       - name: Deploy Stage
-        run: curl -X POST -F 'name=pruizlabqopenapi' -F 'yaml=https://https://raw.githubusercontent.com/pruizmnz/LabQuanntumModulo5/refs/heads/main/openapi_tutorial.yaml' http://quantumservicesdeployment.spilab.es:8081/docker
+        run: curl -X POST -F 'name=pruizlabqopenapi' -F 'yaml=https://raw.githubusercontent.com/pruizmnz/LabQuanntumModulo5/refs/heads/main/openapi_tutorial.yaml' http://quantumservicesdeployment.spilab.es:8081/docker
 
           
 
